@@ -4,17 +4,15 @@ SUSPICIOUS_KEYWORDS = [
     "bank", "bancaire", "livraison", "confirmer"
 ]
 
-def explain_prediction(text: str):
-    text_lower = text.lower()
-    triggers = [kw for kw in SUSPICIOUS_KEYWORDS if kw in text_lower]
+def explain_prediction(text: str, rules_triggered: list, prediction: str, risk_score: float) -> str:
+    if rules_triggered:
+        return (
+            f"Le message a été classé comme {prediction} avec un score de risque de "
+            f"{risk_score:.2f}, car il contient des indices suspects : "
+            f"{', '.join(rules_triggered)}."
+        )
 
-    if triggers:
-        return {
-            "rules_triggered": triggers,
-            "explanation": f"Alerte levée car le message contient des indices suspects : {', '.join(triggers)}"
-        }
-
-    return {
-        "rules_triggered": [],
-        "explanation": "Aucun mot-clé suspect majeur détecté par les règles simples."
-    }
+    return (
+        f"Le message a été classé comme {prediction} avec un score de risque de "
+        f"{risk_score:.2f}. Aucun mot-clé suspect majeur n'a été détecté par les règles."
+    )

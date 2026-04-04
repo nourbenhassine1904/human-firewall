@@ -1,11 +1,10 @@
 import os
 import re
-from pathlib import Path
 import joblib
 import pandas as pd
 
-BASE_DIR = Path(__file__).resolve().parent
-MODEL_PATH = BASE_DIR.parent / "models" / "phishing_model.joblib"
+MODEL_PATH = "backend/models/phishing_model.joblib"
+
 
 def clean_text(text: str) -> str:
     if not isinstance(text, str):
@@ -26,7 +25,7 @@ def load_dataset(path: str) -> pd.DataFrame:
 
 
 def load_model():
-    if not MODEL_PATH.exists():
+    if not os.path.exists(MODEL_PATH):
         raise FileNotFoundError(f"Model not found: {MODEL_PATH}")
     return joblib.load(MODEL_PATH)
 
@@ -41,8 +40,11 @@ def predict_message(text: str):
     classes = list(model.named_steps["clf"].classes_)
     prob_dict = {classes[i]: float(probs[i]) for i in range(len(classes))}
 
+    phishing_prob = prob_dict.get("phishing", 0.0)
+
     return {
         "clean_text": clean,
         "prediction": pred,
-        "probabilities": prob_dict
+        "probabilities": prob_dict,
+        "ml_score": phishing_prob
     }
