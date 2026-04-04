@@ -21,5 +21,45 @@
     "human_decision": "approve",
     "analyst_comment": "Phishing confirmé par l'analyste.",
     "decision_time": "2026-04-04T22:47:22.628794"
+  },
+  {
+    "analysis_id": "235c2583-a58d-4b8f-9e9c-a8df81d1a821",
+    "input_text": "Votre compte bancaire sera suspendu. Cliquez ici immédiatement pour vérifier vos informations.",
+    "prediction": "phishing",
+    "risk_score": 0.728,
+    "probabilities": {
+      "phishing": 0.718577847958928,
+      "safe": 0.281422152041072
+    },
+    "rules_triggered": [
+      "immédiatement",
+      "cliquez",
+      "compte",
+      "suspendu",
+      "bancaire"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.73, car il contient des indices suspects : immédiatement, cliquez, compte, suspendu, bancaire.",
+    "recommended_action": "Escalate to analyst",
+    "created_at": "2026-04-04T23:00:31.479335",
+    "human_decision": "approve",
+    "analyst_comment": "Confirmed phishing",
+    "decision_time": "2026-04-04T23:01:01.970720"
+  },
+  {
+    "analysis_id": "85cfd54b-1e66-4a4e-aa56-06f96cb5a5c4",
+    "input_text": "Rappel : réunion demain à 10h pour finaliser le projet.",
+    "prediction": "safe",
+    "risk_score": 0.2213,
+    "probabilities": {
+      "phishing": 0.3161658204058829,
+      "safe": 0.6838341795941171
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.22. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "created_at": "2026-04-04T23:03:05.594946",
+    "human_decision": "reject",
+    "analyst_comment": "Confirmed phishing",
+    "decision_time": "2026-04-04T23:05:31.730609"
   }
 ]
