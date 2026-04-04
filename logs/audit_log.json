@@ -1,0 +1,25 @@
+[
+  {
+    "analysis_id": "a54dd851-b65d-456d-8fa2-d7b17a4241d0",
+    "input_text": "Votre compte bancaire sera suspendu. Cliquez ici immédiatement pour vérifier vos informations.",
+    "prediction": "phishing",
+    "risk_score": 0.728,
+    "probabilities": {
+      "phishing": 0.718577847958928,
+      "safe": 0.281422152041072
+    },
+    "rules_triggered": [
+      "immédiatement",
+      "cliquez",
+      "compte",
+      "suspendu",
+      "bancaire"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.73, car il contient des indices suspects : immédiatement, cliquez, compte, suspendu, bancaire.",
+    "recommended_action": "Escalate to analyst",
+    "created_at": "2026-04-04T22:46:11.521397",
+    "human_decision": "approve",
+    "analyst_comment": "Phishing confirmé par l'analyste.",
+    "decision_time": "2026-04-04T22:47:22.628794"
+  }
+]
