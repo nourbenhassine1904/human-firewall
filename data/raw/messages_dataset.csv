@@ -1,0 +1,132 @@
+text,label,source,language,is_tunisian_context
+"On se voit ce weekend?",safe,synthetic,fr,0
+"Réunion équipe demain à 9h en salle A2.",safe,synthetic,fr,0
+"N'oubliez pas de soumettre votre notebook avant 23h.",safe,synthetic,fr,0
+"Le cours de machine learning commence à 8h30.",safe,synthetic,fr,0
+"Confirmation de votre rendez-vous le 15 avril à 14h.",safe,synthetic,fr,0
+"Peux-tu m'envoyer le rapport avant 17h?",safe,synthetic,fr,0
+"Notification: Votre commande a été confirmée.",safe,synthetic,fr,0
+"Rappel: La deadline du projet est le 20 avril.",safe,synthetic,fr,0
+"Voici le lien pour l'enregistrement du webinaire.",safe,synthetic,fr,0
+"Message de l'administration: Les bureaux fermeront le 24 avril.",safe,synthetic,fr,0
+"Tu as des nouvelles du client?",safe,synthetic,fr,0
+"L'équipe propose un déjeuner en commun aujourd'hui.",safe,synthetic,fr,0
+"Votre facture électronique est disponible.",safe,synthetic,fr,0
+"Mise à jour du système prévue le week-end.",safe,synthetic,fr,0
+"Comment ça va? Ça fait longtemps!",safe,synthetic,fr,0
+"J'ai reçu le fichier, merci beaucoup.",safe,synthetic,fr,0
+"Réunion de suivi dans 10 minutes.",safe,synthetic,fr,0
+"Les résultats du test sont affichés.",safe,synthetic,fr,0
+"Nouvelles heures d'ouverture à partir de demain.",safe,synthetic,fr,0
+"Projet approuvé par la direction.",safe,synthetic,fr,0
+"Visite client confirmée pour lundi.",safe,synthetic,fr,0
+"Formations dispensées avec succès.",safe,synthetic,fr,0
+"Appel de suivi prévu demain.",safe,synthetic,fr,0
+"Code source push sur le repository.",safe,synthetic,fr,0
+"Invitation à la conférence tech lundi.",safe,synthetic,fr,0
+"Your account statement is ready for download.",safe,synthetic,en,0
+"Team lunch this Friday at noon.",safe,synthetic,en,0
+"Meeting postponed to next week.",safe,synthetic,en,0
+"The report looks great thanks for your work.",safe,synthetic,en,0
+"Deadline extended until May 1st.",safe,synthetic,en,0
+"Can you send me the presentation slides?",safe,synthetic,en,0
+"Project completed successfully.",safe,synthetic,en,0
+"Reminder: training session tomorrow 2 PM.",safe,synthetic,en,0
+"Your password was recently changed.",safe,synthetic,en,0
+"Quarterly results are now available.",safe,synthetic,en,0
+"Server maintenance completed on schedule.",safe,synthetic,en,0
+"New version deployed successfully.",safe,synthetic,en,0
+"Please review the attached documentation.",safe,synthetic,en,0
+"Workshop materials shared in the drive.",safe,synthetic,en,0
+"Conference tickets are ready to pick up.",safe,synthetic,en,0
+"الاجتماع المقرر غدا في السابعة مساء.",safe,synthetic,ar,0
+"تم تأكيد حجزك للفندق.",safe,synthetic,ar,0
+"رسالة تذكيرية: موعد التسليم غدا.",safe,synthetic,ar,0
+"شكرا على ردك السريع.",safe,synthetic,ar,0
+"تم تحديث البيانات بنجاح.",safe,synthetic,ar,0
+"URGENT: Your account will be locked. Click here now to verify.",phishing,synthetic,en,0
+"Vous avez gagné un bon d'achat exceptionnel. Cliquez ici pour confirmer avant minuit.",phishing,synthetic,fr,0
+"URGENT: Verification required. Your account has been compromised. Click link.",phishing,synthetic,en,0
+"Confirmer votre identité maintenant pour débloquer complet accès.",phishing,synthetic,fr,0
+"Your bank account has been suspended. Verify immediately here.",phishing,synthetic,en,0
+"Demande urgente: Rafraîchir votre mot de passe via ce lien sécurisé.",phishing,synthetic,fr,0
+"WARNING: Unusual activity detected. Confirm your identity immediately.",phishing,synthetic,en,0
+"Cliquez ici pour récupérer votre code de vérification à usage unique.",phishing,synthetic,fr,0
+"Paiement refusé. Merci de mettre à jour votre carte via le lien suivant.",phishing,synthetic,fr,0
+"Votre colis ne peut pas être livré. Merci de confirmer votre adresse via ce lien.",phishing,synthetic,fr,0
+"URGENT - Action Required Within 24 Hours or Your Account Will Be Closed.",phishing,synthetic,en,0
+"Congratulations! You have won a prize. Click to claim now.",phishing,synthetic,en,0
+"Votre code de vérification est requis pour éviter le blocage de votre compte.",phishing,synthetic,fr,0
+"Please update your payment method immediately to avoid service interruption.",phishing,synthetic,en,0
+"ALERTE SÉCURITÉ: Connexion non autorisée détectée. Vérifiez maintenant.",phishing,synthetic,fr,0
+"Your Netflix subscription needs renewal. Click here now.",phishing,synthetic,en,0
+"Urgent: Confirm identity to unlock account access immediately.",phishing,synthetic,en,0
+"Suspected fraudulent activity on your card. Verify urgently.",phishing,synthetic,en,0
+"Renouveller votre abonnement avant expiration - Cliquez ici.",phishing,synthetic,fr,0
+"Votre compte sera fermé si vous ne confirmez pas maintenant.",phishing,synthetic,fr,0
+"Votre compte bancaire a été suspendu. Vérifiez immédiatement vos informations.",phishing,synthetic,fr,1
+"Vous avez gagné un bon d'achat exceptionnel. Cliquez ici pour confirmer avant minuit.",phishing,synthetic,fr,1
+"Paiement refusé. Merci de mettre à jour votre carte via le lien suivant.",phishing,synthetic,fr,1
+"Votre colis ne peut pas être livré. Merci de confirmer votre adresse via ce lien.",phishing,synthetic,fr,1
+"Votre code de vérification est requis pour éviter le blocage de votre compte.",phishing,synthetic,fr,1
+"Votre compte Ooredoo nécessite une vérification immédiate.",phishing,synthetic,fr,1
+"URGENT: Votre compte Tunisie Telecom a été temporairement bloqué.",phishing,synthetic,fr,1
+"Confirmer votre identité pour débloquer accès à votre compte bancaire.",phishing,synthetic,fr,1
+"Cliquez ici pour mettre à jour vos informations de paiement maintenant.",phishing,synthetic,fr,1
+"Vérification urgente requise pour votre compte STB.",phishing,synthetic,fr,1
+"Vous avez reçu un remboursement. Cliquez pour le confirmer.",phishing,synthetic,fr,1
+"Mise à jour de sécurité requise immédiatement.",phishing,synthetic,fr,1
+"Réunion équipe demain à 9h en salle A2.",safe,synthetic,fr,1
+"N'oubliez pas de soumettre votre notebook avant 23h.",safe,synthetic,fr,1
+"Le cours de machine learning commence à 8h30.",safe,synthetic,fr,1
+"Confirmation de votre rendez-vous le 15 avril à 14h.",safe,synthetic,fr,1
+"Peux-tu m'envoyer le rapport avant 17h?",safe,synthetic,fr,1
+"Notification: Votre commande a été confirmée.",safe,synthetic,fr,1
+"Rappel: La deadline du projet est le 20 avril.",safe,synthetic,fr,1
+"Voici le lien pour l'enregistrement du webinaire.",safe,synthetic,fr,1
+"Message de l'administration: Les bureaux fermeront le 24 avril.",safe,synthetic,fr,1
+"Tu as des nouvelles du client?",safe,synthetic,fr,1
+"Réunion à la Marsa demain à 14h.",safe,synthetic,fr,1
+"Confirmation de votre formation à ESPRIT.",safe,synthetic,fr,1
+"Le projet universitaire est approuvé.",safe,synthetic,fr,1
+"Rendez-vous chez le médecin lundi.",safe,synthetic,fr,1
+"Correction de vos copies disponible.",safe,synthetic,fr,1
+"Please send me the report before 6 PM.",safe,synthetic,en,0
+"Your subscription has been renewed.",safe,synthetic,en,0
+"Week-end trip to Djerba confirmed.",safe,synthetic,en,0
+"The course materials are ready.",safe,synthetic,en,0
+"Your booking is confirmed.",safe,synthetic,en,0
+"Vous avez une notification: confirmation de paiement.",safe,mixed,fr,0
+"The meeting has been rescheduled for tomorrow.",safe,mixed,en,0
+"Urgent: Votre compte sera verrouillé dans 24 heures. Cliquez ici.",phishing,mixed,fr,0
+"Click here now - Your account needs immediate attention.",phishing,mixed,en,0
+"WARNING - Urgent action: Vérifiez votre identité maintenant.",phishing,mixed,fr,1
+"ALERTE: Your Tunisie Telecom account is locked - Click to unlock.",phishing,mixed,en,1
+"Votre compte à la Banque Tunisienne doit être vérifié immédiatement.",phishing,synthetic,fr,1
+"Message d'alerte: Situation anormale détectée sur votre compte.",phishing,synthetic,fr,1
+"لقد تم كشف نشاط مريب على حسابك. تحقق الآن.",phishing,synthetic,ar,0
+"رسالة من البنك: تحديث معلومات الحساب مطلوب فورا.",phishing,synthetic,ar,0
+"تحذير: حسابك سيتم إغلاقه إذا لم تتحقق.",phishing,synthetic,ar,0
+"تأكيد أن حسابك يتطلب تحديث معلوماتك فورا.",phishing,synthetic,ar,0
+"Urgent action required: verify your Apple ID now.",phishing,synthetic,en,0
+"Your PayPal account requires immediate verification.",phishing,synthetic,en,0
+"Amazon account suspended. Restore access immediately.",phishing,synthetic,en,0
+"Action urgente: Votre compte Facebook a été compromis.",phishing,synthetic,fr,0
+"Mise à jour vitale pour sécuriser votre compte.",phishing,synthetic,fr,0
+"Code de découverte gratuit à utiliser aujourd'hui.",phishing,synthetic,fr,0
+"Code de suivi de votre colis: 12345789.",safe,synthetic,fr,0
+"Félicitations pour votre participation au concours.",safe,synthetic,fr,0
+"Invitation à rejoindre notre équipe.",safe,synthetic,fr,0
+"Article nouveau publié sur le blog.",safe,synthetic,fr,0
+"Tickets de cinéma réservés pour samedi.",safe,synthetic,fr,0
+"Merci pour votre achat en ligne.",safe,synthetic,fr,0
+"Documentation mise à jour disponible.",safe,synthetic,fr,0
+"Appel gratuit avec notre expert prêt.",safe,synthetic,en,0
+"Your event registration has been confirmed.",safe,synthetic,en,0
+"Thank you for subscribing to our newsletter.",safe,synthetic,en,0
+"Your fitness goals are being tracked successfully.",safe,synthetic,en,0
+"Booking confirmation for your hotel stay.",safe,synthetic,en,0
+"New product available in your favorite category.",safe,synthetic,en,0
+"قد تم تأكيد طلبك رقم NUM.",safe,synthetic,ar,0
+"رابط تحميل الملف المطلوب.",safe,synthetic,ar,0
+"الرابط لتحديث حسابك على البنك:",phishing,synthetic,ar,0
