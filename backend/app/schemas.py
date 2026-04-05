@@ -19,6 +19,16 @@ class AnalyzeResponse(BaseModel):
     attack_type: str
     remediation_tips: List[str]
 
+    psychological_profile: List[str]
+    psychological_explanation: str
+
+    tunisian_context_detected: bool
+    tunisian_indicators: List[str]
+    tunisian_context_message: str
+
+    ml_score: float
+    rules_score: float
+
 
 class DecisionRequest(BaseModel):
     analysis_id: str

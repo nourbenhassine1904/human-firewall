@@ -306,5 +306,277 @@
     "created_at": "2026-04-05T00:22:03.546541",
     "human_decision": null,
     "analyst_comment": ""
+  },
+  {
+    "analysis_id": "f03119ee-24e1-451b-bf49-068521006417",
+    "input_text": "Votre compte bancaire sera suspendu. Cliquez ici immédiatement.",
+    "prediction": "phishing",
+    "risk_score": 0.7203,
+    "probabilities": {
+      "phishing": 0.7075910590237944,
+      "safe": 0.2924089409762056
+    },
+    "rules_triggered": [
+      "immédiatement",
+      "cliquez",
+      "compte",
+      "suspendu",
+      "bancaire"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.72, car il contient des indices suspects : immédiatement, cliquez, compte, suspendu, bancaire.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "high",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:28:52.783769",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "7c5d4290-5513-4e23-b1f7-5de8344d792a",
+    "input_text": "Votre colis ne peut pas être livré. Merci de confirmer votre adresse.",
+    "prediction": "phishing",
+    "risk_score": 0.6108,
+    "probabilities": {
+      "phishing": 0.6796566723478337,
+      "safe": 0.3203433276521663
+    },
+    "rules_triggered": [
+      "confirmer",
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.61, car il contient des indices suspects : confirmer, colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "created_at": "2026-04-05T00:29:04.343126",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "b2ea8f70-3e4b-46da-b3da-a4c7e5104fd1",
+    "input_text": "Votre code OTP est requis pour éviter le blocage.",
+    "prediction": "phishing",
+    "risk_score": 0.5104,
+    "probabilities": {
+      "phishing": 0.6005346344830874,
+      "safe": 0.3994653655169126
+    },
+    "rules_triggered": [
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.51, car il contient des indices suspects : otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "credential theft",
+    "remediation_tips": [
+      "Do not share your password or OTP.",
+      "Change your password if you already responded.",
+      "Enable two-factor authentication on the affected account."
+    ],
+    "created_at": "2026-04-05T00:29:18.886365",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "8b64e15d-f556-4be4-b708-58bdaf432d47",
+    "input_text": "Urgent : votre compte BIAT sera suspendu immédiatement. Vérifiez vos informations maintenant.",
+    "prediction": "phishing",
+    "risk_score": 0.6917,
+    "probabilities": {
+      "phishing": 0.7309646659733205,
+      "safe": 0.26903533402667945
+    },
+    "rules_triggered": [
+      "urgent",
+      "immédiatement",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.69, car il contient des indices suspects : urgent, immédiatement, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.731,
+    "rules_score": 0.6,
+    "created_at": "2026-04-05T01:20:32.222120",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "06b0fc5b-a16d-4fe8-9db2-b35af201cc6a",
+    "input_text": "Votre colis ne peut pas être livré. Merci de confirmer votre adresse avant minuit.",
+    "prediction": "phishing",
+    "risk_score": 0.6151,
+    "probabilities": {
+      "phishing": 0.68581118898849,
+      "safe": 0.31418881101150997
+    },
+    "rules_triggered": [
+      "confirmer",
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : confirmer, colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "psychological_profile": [
+      "pressure"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: pressure",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "colis"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.6858,
+    "rules_score": 0.45,
+    "created_at": "2026-04-05T01:20:34.289115",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "8e49fe04-62f9-4fe4-9142-8dc8c9e64ef6",
+    "input_text": "Félicitations, vous avez gagné un bon d'achat exceptionnel. Cliquez vite pour réclamer votre récompense.",
+    "prediction": "safe",
+    "risk_score": 0.49,
+    "probabilities": {
+      "phishing": 0.6357162346364745,
+      "safe": 0.36428376536352547
+    },
+    "rules_triggered": [
+      "cliquez"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.49, car il contient des indices suspects : cliquez.",
+    "recommended_action": "No action",
+    "severity": "medium",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "reward"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, reward",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.6357,
+    "rules_score": 0.15,
+    "created_at": "2026-04-05T01:20:36.366798",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "f2f810f6-d1e1-429c-a195-6f8dca373505",
+    "input_text": "\"Votre colis ne peut pas être livré. Merci de confirmer votre adresse avant minuit.\"",
+    "prediction": "phishing",
+    "risk_score": 0.6151,
+    "probabilities": {
+      "phishing": 0.68581118898849,
+      "safe": 0.31418881101150997
+    },
+    "rules_triggered": [
+      "confirmer",
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : confirmer, colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "psychological_profile": [
+      "pressure"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: pressure",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "colis"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.6858,
+    "rules_score": 0.45,
+    "created_at": "2026-04-05T01:29:14.316791",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "fb8e1880-71cc-496f-9633-cf2e364fb8b7",
+    "input_text": "Urgent : votre compte BIAT sera suspendu immédiatement. Vérifiez vos informations maintenant via ce lien.",
+    "prediction": "phishing",
+    "risk_score": 0.7042,
+    "probabilities": {
+      "phishing": 0.7488722680046895,
+      "safe": 0.25112773199531047
+    },
+    "rules_triggered": [
+      "urgent",
+      "immédiatement",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.70, car il contient des indices suspects : urgent, immédiatement, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "high",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.7489,
+    "rules_score": 0.6,
+    "created_at": "2026-04-05T01:35:44.600198",
+    "human_decision": null,
+    "analyst_comment": ""
   }
 ]

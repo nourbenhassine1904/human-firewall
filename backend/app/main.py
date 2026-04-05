@@ -5,7 +5,9 @@ from backend.app.rules import (
     recommend_action,
     get_severity,
     get_attack_type,
-    get_remediation_tips
+    get_remediation_tips,
+    detect_psychological_manipulation,
+    detect_tunisian_context
 )
 
 from backend.app.schemas import (
@@ -15,7 +17,6 @@ from backend.app.schemas import (
     DecisionResponse
 )
 from backend.app.model_utils import predict_message
-from backend.app.rules import detect_rules, recommend_action
 from backend.app.explain import explain_prediction
 from backend.app.logger_utils import create_analysis_log, read_logs, update_decision_log
 
@@ -60,6 +61,9 @@ def analyze_message(payload: AnalyzeRequest):
     attack_type = get_attack_type(text, prediction)
     remediation_tips = get_remediation_tips(attack_type, prediction)
 
+    psych_result = detect_psychological_manipulation(text)
+    tn_result = detect_tunisian_context(text)
+
     analysis_id = str(uuid4())
 
     log_entry = {
@@ -73,7 +77,14 @@ def analyze_message(payload: AnalyzeRequest):
         "recommended_action": recommended_action,
         "severity": severity,
         "attack_type": attack_type,
-        "remediation_tips": remediation_tips
+        "remediation_tips": remediation_tips,
+        "psychological_profile": psych_result["psychological_profile"],
+        "psychological_explanation": psych_result["psychological_explanation"],
+        "tunisian_context_detected": tn_result["tunisian_context_detected"],
+        "tunisian_indicators": tn_result["tunisian_indicators"],
+        "tunisian_context_message": tn_result["tunisian_context_message"],
+        "ml_score": round(ml_score, 4),
+        "rules_score": round(rules_score, 4)
     }
 
     create_analysis_log(log_entry)
@@ -89,7 +100,14 @@ def analyze_message(payload: AnalyzeRequest):
         "recommended_action": recommended_action,
         "severity": severity,
         "attack_type": attack_type,
-        "remediation_tips": remediation_tips
+        "remediation_tips": remediation_tips,
+        "psychological_profile": psych_result["psychological_profile"],
+        "psychological_explanation": psych_result["psychological_explanation"],
+        "tunisian_context_detected": tn_result["tunisian_context_detected"],
+        "tunisian_indicators": tn_result["tunisian_indicators"],
+        "tunisian_context_message": tn_result["tunisian_context_message"],
+        "ml_score": round(ml_score, 4),
+        "rules_score": round(rules_score, 4)
     }
 
 

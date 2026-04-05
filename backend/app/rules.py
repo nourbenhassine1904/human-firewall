@@ -98,3 +98,64 @@ def get_remediation_tips(attack_type: str, prediction: str) -> list[str]:
             "Escalate to a human analyst."
         ]
     )
+
+
+def detect_psychological_manipulation(text: str):
+    """Detect psychological manipulation tactics in text"""
+    text_lower = text.lower()
+
+    categories = {
+        "urgency": [
+            "urgent", "immédiatement", "now", "asap", "tout de suite", "vite"
+        ],
+        "fear": [
+            "suspendu", "bloqué", "blocked", "locked", "expiré", "menace", "fermé"
+        ],
+        "pressure": [
+            "dernière chance", "before midnight", "avant minuit", "sinon", "must", "obligatoire"
+        ],
+        "reward": [
+            "gagné", "récompense", "bonus", "cadeau", "prize", "winner", "bon d'achat"
+        ]
+    }
+
+    detected = []
+
+    for category, keywords in categories.items():
+        if any(keyword in text_lower for keyword in keywords):
+            detected.append(category)
+
+    if detected:
+        explanation = "Psychological manipulation detected: " + ", ".join(detected)
+    else:
+        explanation = "No strong psychological manipulation pattern detected."
+
+    return {
+        "psychological_profile": detected,
+        "psychological_explanation": explanation
+    }
+
+
+def detect_tunisian_context(text: str):
+    """Detect Tunisian-specific phishing indicators"""
+    text_lower = text.lower()
+
+    tunisian_keywords = [
+        "tunisie", "tunisia", "poste tunisienne", "ooredoo", "orange", "tunisie telecom",
+        "biat", "stb", "attijari", "amen bank", "bna", "bh bank",
+        "dinars", "dt", "tnd", "colis", "livraison"
+    ]
+
+    indicators = [kw for kw in tunisian_keywords if kw in text_lower]
+    detected = len(indicators) > 0
+
+    if detected:
+        message = "This message matches common phishing patterns targeting Tunisian citizens."
+    else:
+        message = "No specific Tunisian contextual indicator detected."
+
+    return {
+        "tunisian_context_detected": detected,
+        "tunisian_indicators": indicators,
+        "tunisian_context_message": message
+    }
