@@ -1,5 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from uuid import uuid4
+from backend.app.rules import (
+    detect_rules,
+    recommend_action,
+    get_severity,
+    get_attack_type,
+    get_remediation_tips
+)
 
 from backend.app.schemas import (
     AnalyzeRequest,
@@ -49,6 +56,9 @@ def analyze_message(payload: AnalyzeRequest):
     )
 
     recommended_action = recommend_action(prediction, final_score)
+    severity = get_severity(final_score)
+    attack_type = get_attack_type(text, prediction)
+    remediation_tips = get_remediation_tips(attack_type, prediction)
 
     analysis_id = str(uuid4())
 
@@ -60,7 +70,10 @@ def analyze_message(payload: AnalyzeRequest):
         "probabilities": ml_result["probabilities"],
         "rules_triggered": rules_result["rules_triggered"],
         "explanation": explanation,
-        "recommended_action": recommended_action
+        "recommended_action": recommended_action,
+        "severity": severity,
+        "attack_type": attack_type,
+        "remediation_tips": remediation_tips
     }
 
     create_analysis_log(log_entry)
@@ -73,7 +86,10 @@ def analyze_message(payload: AnalyzeRequest):
         "probabilities": ml_result["probabilities"],
         "rules_triggered": rules_result["rules_triggered"],
         "explanation": explanation,
-        "recommended_action": recommended_action
+        "recommended_action": recommended_action,
+        "severity": severity,
+        "attack_type": attack_type,
+        "remediation_tips": remediation_tips
     }
 
 

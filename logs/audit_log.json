@@ -61,5 +61,250 @@
     "human_decision": "reject",
     "analyst_comment": "Confirmed phishing",
     "decision_time": "2026-04-04T23:05:31.730609"
+  },
+  {
+    "analysis_id": "125ba771-6ed2-40a7-9bd8-bb1291a57414",
+    "input_text": "Votre compte bancaire sera suspendu. Cliquez ici immédiatement pour vérifier vos informations.",
+    "prediction": "phishing",
+    "risk_score": 0.728,
+    "probabilities": {
+      "phishing": 0.718577847958928,
+      "safe": 0.281422152041072
+    },
+    "rules_triggered": [
+      "immédiatement",
+      "cliquez",
+      "compte",
+      "suspendu",
+      "bancaire"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.73, car il contient des indices suspects : immédiatement, cliquez, compte, suspendu, bancaire.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "high",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:17:09.660496",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "e6a29e25-70d7-4abd-b1b9-1941c216849b",
+    "input_text": "Votre colis ne peut pas être livré. Merci de confirmer votre adresse via ce lien.",
+    "prediction": "phishing",
+    "risk_score": 0.6339,
+    "probabilities": {
+      "phishing": 0.7127288398425773,
+      "safe": 0.2872711601574227
+    },
+    "rules_triggered": [
+      "confirmer",
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.63, car il contient des indices suspects : confirmer, colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "created_at": "2026-04-05T00:17:40.434408",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "ca2a7deb-cafd-4e8a-8c9a-0642ed4e2b8b",
+    "input_text": "Votre code OTP est requis pour éviter le blocage de votre compte.",
+    "prediction": "phishing",
+    "risk_score": 0.6158,
+    "probabilities": {
+      "phishing": 0.6868433307358384,
+      "safe": 0.31315666926416164
+    },
+    "rules_triggered": [
+      "compte",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : compte, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:17:56.988664",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "9f680a19-1f61-4a1c-b0c6-732c380b9e52",
+    "input_text": "Votre code OTP est requis pour éviter le blocage de votre compte.",
+    "prediction": "phishing",
+    "risk_score": 0.6158,
+    "probabilities": {
+      "phishing": 0.6868433307358384,
+      "safe": 0.31315666926416164
+    },
+    "rules_triggered": [
+      "compte",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : compte, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:18:15.986210",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "0ca9157d-be46-4230-925b-d7ec86ddfc76",
+    "input_text": "Votre code OTP est requis pour éviter le blocage de votre compte.",
+    "prediction": "phishing",
+    "risk_score": 0.6158,
+    "probabilities": {
+      "phishing": 0.6868433307358384,
+      "safe": 0.31315666926416164
+    },
+    "rules_triggered": [
+      "compte",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : compte, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:18:31.245086",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "9baa209f-d894-4340-b711-37d3eac5ce68",
+    "input_text": "Votre code OTP est requis pour éviter le blocage de votre compte.",
+    "prediction": "phishing",
+    "risk_score": 0.6158,
+    "probabilities": {
+      "phishing": 0.6868433307358384,
+      "safe": 0.31315666926416164
+    },
+    "rules_triggered": [
+      "compte",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : compte, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:18:32.369696",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "4d38deef-95bb-4e84-89aa-1d7d6edc3292",
+    "input_text": "Votre colis ne peut pas être livré. Merci de confirmer votre adresse via ce lien.",
+    "prediction": "phishing",
+    "risk_score": 0.6339,
+    "probabilities": {
+      "phishing": 0.7127288398425773,
+      "safe": 0.2872711601574227
+    },
+    "rules_triggered": [
+      "confirmer",
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.63, car il contient des indices suspects : confirmer, colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "created_at": "2026-04-05T00:21:11.642277",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "acd57d9c-c570-4c65-aa03-3499e9b0e011",
+    "input_text": "Votre code OTP est requis pour éviter le blocage de votre compte.",
+    "prediction": "phishing",
+    "risk_score": 0.6158,
+    "probabilities": {
+      "phishing": 0.6868433307358384,
+      "safe": 0.31315666926416164
+    },
+    "rules_triggered": [
+      "compte",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : compte, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:21:45.670587",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "91b955c8-aab7-4caa-8930-da5fbdfcb35c",
+    "input_text": "Votre code OTP est requis pour éviter le blocage de votre compte.",
+    "prediction": "phishing",
+    "risk_score": 0.6158,
+    "probabilities": {
+      "phishing": 0.6868433307358384,
+      "safe": 0.31315666926416164
+    },
+    "rules_triggered": [
+      "compte",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.62, car il contient des indices suspects : compte, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "created_at": "2026-04-05T00:22:03.546541",
+    "human_decision": null,
+    "analyst_comment": ""
   }
 ]

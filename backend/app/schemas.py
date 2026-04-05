@@ -15,6 +15,9 @@ class AnalyzeResponse(BaseModel):
     rules_triggered: List[str]
     explanation: str
     recommended_action: str
+    severity: str
+    attack_type: str
+    remediation_tips: List[str]
 
 
 class DecisionRequest(BaseModel):
