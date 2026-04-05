@@ -1342,5 +1342,1078 @@
     "created_at": "2026-04-05T03:59:53.707026",
     "human_decision": null,
     "analyst_comment": ""
+  },
+  {
+    "analysis_id": "e69e0109-e67f-43d3-b784-ac47322c10cb",
+    "input_text": "Urgent : votre compte BIAT est suspendu. Vérifiez maintenant",
+    "prediction": "phishing",
+    "risk_score": 0.6325,
+    "probabilities": {
+      "phishing": 0.7107415313936132,
+      "safe": 0.2892584686063868
+    },
+    "rules_triggered": [
+      "urgent",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.63, car il contient des indices suspects : urgent, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.7107,
+    "rules_score": 0.45,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.706845",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "edb6d04c-7ae0-45ee-b962-2f8f1fb0e51c",
+    "input_text": "Votre colis ne peut pas être livré. Confirmez votre adresse avant minuit",
+    "prediction": "phishing",
+    "risk_score": 0.5432,
+    "probabilities": {
+      "phishing": 0.647455002294115,
+      "safe": 0.35254499770588493
+    },
+    "rules_triggered": [
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.54, car il contient des indices suspects : colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "psychological_profile": [
+      "pressure"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: pressure",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "colis"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.6475,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.729289",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "6f753523-63cb-4871-8539-2a5790a45905",
+    "input_text": "Envoyez votre code OTP immédiatement pour éviter le blocage",
+    "prediction": "phishing",
+    "risk_score": 0.5607,
+    "probabilities": {
+      "phishing": 0.6081918078175996,
+      "safe": 0.39180819218240037
+    },
+    "rules_triggered": [
+      "immédiatement",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.56, car il contient des indices suspects : immédiatement, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "credential theft",
+    "remediation_tips": [
+      "Do not share your password or OTP.",
+      "Change your password if you already responded.",
+      "Enable two-factor authentication on the affected account."
+    ],
+    "psychological_profile": [
+      "urgency"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.6082,
+    "rules_score": 0.45,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.760411",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "8f1105e9-a0e9-48ef-a624-a9176f0c1ab1",
+    "input_text": "Félicitations ! Vous avez gagné un bon d'achat. Cliquez maintenant",
+    "prediction": "safe",
+    "risk_score": 0.4632,
+    "probabilities": {
+      "phishing": 0.5973668660279149,
+      "safe": 0.4026331339720851
+    },
+    "rules_triggered": [
+      "cliquez"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.46, car il contient des indices suspects : cliquez.",
+    "recommended_action": "No action",
+    "severity": "medium",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "reward"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: reward",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.5974,
+    "rules_score": 0.15,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.789638",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "054f0ca3-1354-4781-944f-6010a177e862",
+    "input_text": "Microsoft security alert: your device is infected. Call support now",
+    "prediction": "safe",
+    "risk_score": 0.366,
+    "probabilities": {
+      "phishing": 0.5228703134503407,
+      "safe": 0.4771296865496592
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.37. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "urgency"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.5229,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.814592",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "b9b1ddd8-9207-4fe5-98c5-d50f8330fc88",
+    "input_text": "Bonjour, votre rendez-vous est confirmé pour demain",
+    "prediction": "safe",
+    "risk_score": 0.3018,
+    "probabilities": {
+      "phishing": 0.43116330272413095,
+      "safe": 0.568836697275869
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.30. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.4312,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.837125",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "8ab6246c-e06e-481c-8c5c-ffbf2776a534",
+    "input_text": "Merci pour votre paiement. Facture disponible sur votre espace client",
+    "prediction": "safe",
+    "risk_score": 0.3817,
+    "probabilities": {
+      "phishing": 0.4810275537443559,
+      "safe": 0.5189724462556441
+    },
+    "rules_triggered": [
+      "paiement"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.38, car il contient des indices suspects : paiement.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.481,
+    "rules_score": 0.15,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.859124",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "643d31d3-b0a1-412c-872e-00b261fa0409",
+    "input_text": "https://bit.ly/biat-verify-account",
+    "prediction": "safe",
+    "risk_score": 0.3989,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "verify",
+      "account"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.40, car il contient des indices suspects : verify, account.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.879659",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "646a5e08-62b6-4496-b8aa-92972c4528a8",
+    "input_text": "https://colis-livraison-urgent.tk/verify",
+    "prediction": "safe",
+    "risk_score": 0.4889,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "urgent",
+      "verify",
+      "livraison",
+      "colis"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.49, car il contient des indices suspects : urgent, verify, livraison, colis.",
+    "recommended_action": "No action",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "urgency"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "colis",
+      "livraison"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.6,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.898656",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "bdf08021-f111-4b5b-a226-60655feacbee",
+    "input_text": "http://ooredoo-verify-otp.com/check",
+    "prediction": "safe",
+    "risk_score": 0.3989,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "verify",
+      "otp"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.40, car il contient des indices suspects : verify, otp.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "ooredoo"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.923290",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "47296453-b5e8-44f1-ae22-b286ef06a9df",
+    "input_text": "https://banque-tunisia.click/login",
+    "prediction": "safe",
+    "risk_score": 0.3539,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "click"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.35, car il contient des indices suspects : click.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "tunisia"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.15,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.941283",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "8744b7e6-7653-45cb-973b-cee6299b6c32",
+    "input_text": "https://www.biat.com.tn/",
+    "prediction": "safe",
+    "risk_score": 0.3089,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.31. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.961296",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "3ce85206-7e4b-4350-8e7d-a8d88d6f969b",
+    "input_text": "https://www.google.com",
+    "prediction": "safe",
+    "risk_score": 0.3089,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.31. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.4413,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:14:55.981819",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "62a0c911-3d3a-41dc-b4b3-d807418990df",
+    "input_text": "Urgent : votre compte BIAT est suspendu. Vérifiez maintenant",
+    "prediction": "phishing",
+    "risk_score": 0.6325,
+    "probabilities": {
+      "phishing": 0.7107415313936132,
+      "safe": 0.2892584686063868
+    },
+    "rules_triggered": [
+      "urgent",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.63, car il contient des indices suspects : urgent, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.7107,
+    "rules_score": 0.45,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.077315",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "287836bd-9d72-4fba-b3c6-d18d599548fa",
+    "input_text": "Votre colis ne peut pas être livré. Confirmez votre adresse avant minuit",
+    "prediction": "phishing",
+    "risk_score": 0.5432,
+    "probabilities": {
+      "phishing": 0.647455002294115,
+      "safe": 0.35254499770588493
+    },
+    "rules_triggered": [
+      "colis",
+      "adresse"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.54, car il contient des indices suspects : colis, adresse.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "delivery scam",
+    "remediation_tips": [
+      "Do not confirm your address from this message.",
+      "Do not click external tracking links.",
+      "Verify delivery status from the official provider website."
+    ],
+    "psychological_profile": [
+      "pressure"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: pressure",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "colis"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.6475,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.110019",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "2ae71c0c-17f0-4893-8dba-0ce269897d79",
+    "input_text": "Envoyez votre code OTP immédiatement pour éviter le blocage",
+    "prediction": "phishing",
+    "risk_score": 0.5607,
+    "probabilities": {
+      "phishing": 0.6081918078175996,
+      "safe": 0.39180819218240037
+    },
+    "rules_triggered": [
+      "immédiatement",
+      "otp",
+      "code"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.56, car il contient des indices suspects : immédiatement, otp, code.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "medium",
+    "attack_type": "credential theft",
+    "remediation_tips": [
+      "Do not share your password or OTP.",
+      "Change your password if you already responded.",
+      "Enable two-factor authentication on the affected account."
+    ],
+    "psychological_profile": [
+      "urgency"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.6082,
+    "rules_score": 0.45,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.130026",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "23ea5a32-de92-49a5-a5df-532660d9eff0",
+    "input_text": "Félicitations ! Vous avez gagné un bon d'achat. Cliquez maintenant",
+    "prediction": "safe",
+    "risk_score": 0.4632,
+    "probabilities": {
+      "phishing": 0.5973668660279149,
+      "safe": 0.4026331339720851
+    },
+    "rules_triggered": [
+      "cliquez"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.46, car il contient des indices suspects : cliquez.",
+    "recommended_action": "No action",
+    "severity": "medium",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "reward"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: reward",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.5974,
+    "rules_score": 0.15,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.161459",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "85e59a7f-82a5-411f-95b3-425630ccac97",
+    "input_text": "Microsoft security alert: your device is infected. Call support now",
+    "prediction": "safe",
+    "risk_score": 0.366,
+    "probabilities": {
+      "phishing": 0.5228703134503407,
+      "safe": 0.4771296865496592
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.37. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "urgency"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.5229,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.187592",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "1eed77de-1b5a-4c93-8f92-e9781d06a8e4",
+    "input_text": "Bonjour, votre rendez-vous est confirmé pour demain",
+    "prediction": "safe",
+    "risk_score": 0.3018,
+    "probabilities": {
+      "phishing": 0.43116330272413095,
+      "safe": 0.568836697275869
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.30. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.4312,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.212989",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "81032437-94e8-418b-be38-8ef409769bc9",
+    "input_text": "Merci pour votre paiement. Facture disponible sur votre espace client",
+    "prediction": "safe",
+    "risk_score": 0.3817,
+    "probabilities": {
+      "phishing": 0.4810275537443559,
+      "safe": 0.5189724462556441
+    },
+    "rules_triggered": [
+      "paiement"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.38, car il contient des indices suspects : paiement.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.481,
+    "rules_score": 0.15,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.240515",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "82ea2105-04c2-4a38-9a27-2f0d7fa17cd6",
+    "input_text": "https://bit.ly/biat-verify-account",
+    "prediction": "safe",
+    "risk_score": 0.3989,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "verify",
+      "account"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.40, car il contient des indices suspects : verify, account.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.265515",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "4391853a-cf2d-4da6-9e0e-7b656b9b716c",
+    "input_text": "https://colis-livraison-urgent.tk/verify",
+    "prediction": "safe",
+    "risk_score": 0.4889,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "urgent",
+      "verify",
+      "livraison",
+      "colis"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.49, car il contient des indices suspects : urgent, verify, livraison, colis.",
+    "recommended_action": "No action",
+    "severity": "medium",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [
+      "urgency"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "colis",
+      "livraison"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.6,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.290517",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "61df8f16-0372-4f91-856d-8b26b886a8bc",
+    "input_text": "http://ooredoo-verify-otp.com/check",
+    "prediction": "safe",
+    "risk_score": 0.3989,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "verify",
+      "otp"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.40, car il contient des indices suspects : verify, otp.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "ooredoo"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.316519",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "2976e4c6-880f-48f9-a54b-4a657e91298e",
+    "input_text": "https://banque-tunisia.click/login",
+    "prediction": "safe",
+    "risk_score": 0.3539,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "click"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.35, car il contient des indices suspects : click.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "tunisia"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.15,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.340078",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "fc6944a0-1f8a-4732-bef2-77bec734d195",
+    "input_text": "https://www.biat.com.tn/",
+    "prediction": "safe",
+    "risk_score": 0.3089,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.31. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.371171",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "3c72545b-7bf3-4bff-b12f-6e2efcf5bf47",
+    "input_text": "https://www.google.com",
+    "prediction": "safe",
+    "risk_score": 0.3089,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.31. Aucun mot-clé suspect majeur n'a été détecté par les règles.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "benign",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": false,
+    "tunisian_indicators": [],
+    "tunisian_context_message": "No specific Tunisian contextual indicator detected.",
+    "ml_score": 0.4413,
+    "rules_score": 0.0,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:15:23.398978",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "a0b418d0-435e-4b12-8348-1be2d689ef3a",
+    "input_text": "Urgent : votre compte BIAT sera suspendu immédiatement. Vérifiez vos informations maintenant via ce lien.",
+    "prediction": "phishing",
+    "risk_score": 0.7042,
+    "probabilities": {
+      "phishing": 0.7488722680046895,
+      "safe": 0.25112773199531047
+    },
+    "rules_triggered": [
+      "urgent",
+      "immédiatement",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.70, car il contient des indices suspects : urgent, immédiatement, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "high",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.7489,
+    "rules_score": 0.6,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:16:30.736760",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "192beb66-a06d-4ed1-b747-ad7b26bf7524",
+    "input_text": "Urgent : votre compte BIAT sera suspendu immédiatement. Vérifiez vos informations maintenant via ce lien.",
+    "prediction": "phishing",
+    "risk_score": 0.7042,
+    "probabilities": {
+      "phishing": 0.7488722680046895,
+      "safe": 0.25112773199531047
+    },
+    "rules_triggered": [
+      "urgent",
+      "immédiatement",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.70, car il contient des indices suspects : urgent, immédiatement, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "high",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.7489,
+    "rules_score": 0.6,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:21:12.078868",
+    "human_decision": null,
+    "analyst_comment": ""
+  },
+  {
+    "analysis_id": "ab73a884-0146-441a-a5b4-d1fad03ad3fd",
+    "input_text": "https://bit.ly/biat-verify-account",
+    "prediction": "safe",
+    "risk_score": 0.3989,
+    "probabilities": {
+      "phishing": 0.4413484262412587,
+      "safe": 0.5586515737587413
+    },
+    "rules_triggered": [
+      "verify",
+      "account"
+    ],
+    "explanation": "Le message a été classé comme safe avec un score de risque de 0.40, car il contient des indices suspects : verify, account.",
+    "recommended_action": "No action",
+    "severity": "low",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "No immediate action required.",
+      "Keep monitoring if the context changes."
+    ],
+    "psychological_profile": [],
+    "psychological_explanation": "No strong psychological manipulation pattern detected.",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.4413,
+    "rules_score": 0.3,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T04:25:42.569533",
+    "human_decision": null,
+    "analyst_comment": ""
   }
 ]
