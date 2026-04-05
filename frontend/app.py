@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 
 import os
-API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8000")
+API_BASE_URL = os.getenv("API_BASE_URL", "http://127.0.0.1:8001")
 
 st.set_page_config(page_title="Human Firewall", layout="wide")
 
@@ -13,13 +13,33 @@ st.subheader("Explainable phishing detection with human-in-the-loop")
 if "analysis_result" not in st.session_state:
     st.session_state.analysis_result = None
 
+if "demo_message" not in st.session_state:
+    st.session_state.demo_message = ""
+
 # ----------------------------
 # Section 1: Analyze message
 # ----------------------------
 st.header("1. Analyze a suspicious message")
 
+# Demo Scenarios
+st.header("Quick Demo Scenarios")
+
+col1, col2, col3 = st.columns(3)
+
+if col1.button("Simulate Banking Scam"):
+    st.session_state.demo_message = "Urgent : votre compte BIAT sera suspendu immédiatement. Vérifiez vos informations maintenant via ce lien."
+
+if col2.button("Simulate Delivery Scam"):
+    st.session_state.demo_message = "Votre colis ne peut pas être livré. Merci de confirmer votre adresse avant minuit via ce lien."
+
+if col3.button("Simulate OTP Scam"):
+    st.session_state.demo_message = "Votre code OTP est requis pour éviter le blocage de votre compte. Envoyez-le immédiatement."
+
+default_message = st.session_state.get("demo_message", "")
+
 message = st.text_area(
     "Paste a suspicious SMS, email, or message here:",
+    value=default_message,
     height=180,
     placeholder="Ex: Votre compte bancaire sera suspendu. Cliquez ici immédiatement..."
 )
@@ -41,13 +61,21 @@ if st.button("Analyze"):
                 st.error(f"Backend error: {response.text}")
 
         except requests.exceptions.ConnectionError:
-            st.error("Cannot connect to backend. Make sure FastAPI is running on port 8000.")
+            st.error("Cannot connect to backend. Make sure FastAPI is running on port 8001.")
 
 # ----------------------------
 # Section 2: Show analysis
 # ----------------------------
 if st.session_state.analysis_result:
     result = st.session_state.analysis_result
+
+    # Block 1: Risk Warning
+    if result["severity"] == "high":
+        st.error("🔴 HIGH RISK — DO NOT INTERACT")
+    elif result["severity"] == "medium":
+        st.warning("🟠 MEDIUM RISK — VERIFY SOURCE")
+    else:
+        st.success("🟢 LOW RISK — SAFE")
 
     st.header("2. Analysis result")
 
@@ -56,12 +84,54 @@ if st.session_state.analysis_result:
     col2.metric("Risk Score", f"{result['risk_score']:.2f}")
     col3.metric("Recommended Action", result["recommended_action"])
 
+    # Block 2: Threat Summary
+    st.subheader("Threat Summary")
+    col1, col2, col3 = st.columns(3)
+    col1.info(f"**Severity:** {result['severity']}")
+    col2.info(f"**Attack Type:** {result['attack_type']}")
+    col3.info(f"**Recommended Action:** {result['recommended_action']}")
+
+    # Block 3: Score Breakdown
+    st.subheader("Explainable AI Score Breakdown")
+    score_df = pd.DataFrame({
+        "Component": ["ML Score", "Rules Score", "Final Risk Score"],
+        "Value": [
+            result["ml_score"],
+            result["rules_score"],
+            result["risk_score"]
+        ]
+    })
+    st.dataframe(score_df, use_container_width=True)
+
     st.subheader("Probabilities")
     probs_df = pd.DataFrame(
         list(result["probabilities"].items()),
         columns=["Class", "Probability"]
     )
     st.dataframe(probs_df, use_container_width=True)
+
+    # Block 4: Social Engineering Analysis
+    st.subheader("Social Engineering Analysis")
+    if result["psychological_profile"]:
+        st.warning(result["psychological_explanation"])
+        for item in result["psychological_profile"]:
+            st.write(f"- {item}")
+    else:
+        st.info(result["psychological_explanation"])
+
+    # Block 5: Citizen Protection Mode
+    st.subheader("Citizen Protection Mode 🇹🇳")
+    if result["tunisian_context_detected"]:
+        st.success(result["tunisian_context_message"])
+        for indicator in result["tunisian_indicators"]:
+            st.write(f"- {indicator}")
+    else:
+        st.info(result["tunisian_context_message"])
+
+    # Block 6: Remediation Tips
+    st.subheader("Remediation Tips")
+    for tip in result["remediation_tips"]:
+        st.write(f"- {tip}")
 
     st.subheader("Triggered Rules")
     if result["rules_triggered"]:
@@ -75,6 +145,10 @@ if st.session_state.analysis_result:
 
     st.subheader("Analysis ID")
     st.code(result["analysis_id"])
+
+    # Block 7: Human Control Required
+    st.markdown("### Human Control Required")
+    st.info("No critical action is executed automatically. Human validation is mandatory.")
 
     # ----------------------------
     # Section 3: Human decision
