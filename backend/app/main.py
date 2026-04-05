@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from uuid import uuid4
 from backend.app.rules import (
     detect_rules,
@@ -7,7 +8,8 @@ from backend.app.rules import (
     get_attack_type,
     get_remediation_tips,
     detect_psychological_manipulation,
-    detect_tunisian_context
+    detect_tunisian_context,
+    detect_qr_risk
 )
 
 from backend.app.schemas import (
@@ -21,6 +23,15 @@ from backend.app.explain import explain_prediction
 from backend.app.logger_utils import create_analysis_log, read_logs, update_decision_log
 
 app = FastAPI(title="Human Firewall API")
+
+# Enable CORS for frontend access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
@@ -36,17 +47,26 @@ def health():
 @app.post("/analyze", response_model=AnalyzeResponse)
 def analyze_message(payload: AnalyzeRequest):
     text = payload.text.strip()
+    mode = payload.mode.strip().lower()
 
     if not text:
         raise HTTPException(status_code=400, detail="Text cannot be empty")
 
+    if mode not in ["message", "qr"]:
+        raise HTTPException(status_code=400, detail="mode must be 'message' or 'qr'")
+
     ml_result = predict_message(text)
     rules_result = detect_rules(text)
+    qr_result = detect_qr_risk(text) if mode == "qr" else {"qr_triggers": [], "qr_score": 0.0}
 
     ml_score = ml_result["ml_score"]
     rules_score = rules_result["rules_score"]
 
-    final_score = round((0.7 * ml_score) + (0.3 * rules_score), 4)
+    if mode == "qr":
+        final_score = round((0.4 * ml_score) + (0.25 * rules_score) + (0.35 * qr_result["qr_score"]), 4)
+    else:
+        final_score = round((0.7 * ml_score) + (0.3 * rules_score), 4)
+
     prediction = "phishing" if final_score >= 0.5 else "safe"
 
     explanation = explain_prediction(
@@ -84,7 +104,10 @@ def analyze_message(payload: AnalyzeRequest):
         "tunisian_indicators": tn_result["tunisian_indicators"],
         "tunisian_context_message": tn_result["tunisian_context_message"],
         "ml_score": round(ml_score, 4),
-        "rules_score": round(rules_score, 4)
+        "rules_score": round(rules_score, 4),
+        "analysis_mode": mode,
+        "qr_triggers": qr_result["qr_triggers"],
+        "qr_score": qr_result["qr_score"]
     }
 
     create_analysis_log(log_entry)
@@ -107,7 +130,10 @@ def analyze_message(payload: AnalyzeRequest):
         "tunisian_indicators": tn_result["tunisian_indicators"],
         "tunisian_context_message": tn_result["tunisian_context_message"],
         "ml_score": round(ml_score, 4),
-        "rules_score": round(rules_score, 4)
+        "rules_score": round(rules_score, 4),
+        "analysis_mode": mode,
+        "qr_triggers": qr_result["qr_triggers"],
+        "qr_score": qr_result["qr_score"]
     }
 
 

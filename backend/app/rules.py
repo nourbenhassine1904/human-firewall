@@ -159,3 +159,45 @@ def detect_tunisian_context(text: str):
         "tunisian_indicators": indicators,
         "tunisian_context_message": message
     }
+
+
+def detect_qr_risk(text: str):
+    """Detect QR-specific risk factors and phishing indicators"""
+    text_lower = text.lower()
+    triggers = []
+    score = 0.0
+
+    shorteners = ["bit.ly", "tinyurl", "t.co", "shorturl", "goo.gl"]
+    suspicious_keywords = [
+        "verify", "login", "update", "payment", "bank", "wallet",
+        "confirm", "account", "otp", "password", "bancaire",
+        "livraison", "colis"
+    ]
+    suspicious_tlds = [".xyz", ".top", ".click", ".shop", ".buzz"]
+
+    if any(s in text_lower for s in shorteners):
+        triggers.append("shortened_url")
+        score += 0.25
+
+    if any(k in text_lower for k in suspicious_keywords):
+        triggers.append("phishing_keywords")
+        score += 0.25
+
+    if any(tld in text_lower for tld in suspicious_tlds):
+        triggers.append("suspicious_domain")
+        score += 0.25
+
+    if text_lower.startswith("http://"):
+        triggers.append("insecure_http")
+        score += 0.15
+
+    if "qr" in text_lower:
+        triggers.append("qr_redirection_context")
+        score += 0.10
+
+    score = min(score, 1.0)
+
+    return {
+        "qr_triggers": triggers,
+        "qr_score": round(score, 4)
+    }

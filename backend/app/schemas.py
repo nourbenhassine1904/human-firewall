@@ -4,6 +4,7 @@ from typing import Dict, List, Optional
 
 class AnalyzeRequest(BaseModel):
     text: str
+    mode: str = "message"  # "message" or "qr"
 
 
 class AnalyzeResponse(BaseModel):
@@ -28,6 +29,10 @@ class AnalyzeResponse(BaseModel):
 
     ml_score: float
     rules_score: float
+
+    analysis_mode: str
+    qr_triggers: List[str]
+    qr_score: float
 
 
 class DecisionRequest(BaseModel):
