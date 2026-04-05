@@ -1,3 +1,7 @@
+# ==============================
+# KEYWORDS
+# ==============================
+
 SUSPICIOUS_KEYWORDS = [
     "urgent", "immédiatement", "cliquez", "click", "verify",
     "password", "mot de passe", "compte", "suspendu",
@@ -5,6 +9,74 @@ SUSPICIOUS_KEYWORDS = [
     "confirmer", "blocked", "locked", "account", "colis",
     "adresse", "code"
 ]
+
+# ==============================
+# ATTACK PATTERNS
+# ==============================
+
+ATTACK_PATTERNS = {
+    "banking_scam": [
+        "bank", "banque", "compte bancaire", "transaction",
+        "paiement", "carte", "card", "payment",
+        "biat", "stb", "attijari", "amen bank", "bna", "bh bank"
+    ],
+    "delivery_scam": [
+        "colis", "livraison", "delivery", "package",
+        "shipment", "courier", "poste tunisienne"
+    ],
+    "credential_theft": [
+        "login", "password", "mot de passe",
+        "verify account", "confirm identity",
+        "reset password", "identifiant"
+    ],
+    "otp_scam": [
+        "otp", "code", "code de verification",
+        "verification code", "security code"
+    ],
+    "tech_support_scam": [
+        "support", "technical support",
+        "microsoft", "apple", "virus",
+        "infected", "security issue"
+    ]
+}
+
+# ==============================
+# PSYCHOLOGICAL PATTERNS
+# ==============================
+
+PSYCHOLOGICAL_PATTERNS = {
+    "urgency": ["urgent", "immédiatement", "asap", "now"],
+    "fear": ["suspendu", "bloqué", "blocked", "locked"],
+    "pressure": ["avant minuit", "last chance"],
+    "authority": ["banque", "support", "service client"],
+    "reward": ["gagné", "bonus", "cadeau"]
+}
+
+# ==============================
+# TUNISIAN CONTEXT PATTERNS
+# ==============================
+
+TUNISIAN_PATTERNS = {
+    "banks": [
+        "biat", "stb", "attijari", "amen bank", "bna", "bh bank", "zitouna"
+    ],
+    "telco": [
+        "ooredoo", "orange", "tunisie telecom"
+    ],
+    "services": [
+        "poste tunisienne", "poste", "colis", "livraison"
+    ],
+    "currency": [
+        "tnd", "dt", "dinars"
+    ],
+    "common_words": [
+        "tunisie", "tunisia", "citoyen", "client"
+    ]
+}
+
+# ==============================
+# BASE RULES
+# ==============================
 
 
 def detect_rules(text: str):
@@ -161,6 +233,153 @@ def detect_tunisian_context(text: str):
     }
 
 
+# ==============================
+# ATTACK PATTERN DETECTION
+# ==============================
+
+def detect_attack_patterns(text: str):
+    text_lower = text.lower()
+    detected_types = {}
+
+    for attack_type, keywords in ATTACK_PATTERNS.items():
+        matches = [kw for kw in keywords if kw in text_lower]
+        if matches:
+            detected_types[attack_type] = matches
+
+    return detected_types
+
+
+def get_main_attack_type(detected_types: dict):
+    if not detected_types:
+        return "unknown"
+    return max(detected_types, key=lambda k: len(detected_types[k]))
+
+
+# ==============================
+# ADVANCED PSYCHOLOGICAL ANALYSIS
+# ==============================
+
+def detect_psychological_patterns_advanced(text: str):
+    text_lower = text.lower()
+    detected = {}
+
+    for category, keywords in PSYCHOLOGICAL_PATTERNS.items():
+        matches = [kw for kw in keywords if kw in text_lower]
+        if matches:
+            detected[category] = matches
+
+    return detected
+
+
+def compute_psychological_score_advanced(detected: dict) -> float:
+    weights = {
+        "urgency": 15,
+        "fear": 20,
+        "pressure": 15,
+        "authority": 10,
+        "reward": 10
+    }
+
+    score = sum(weights.get(cat, 10) * len(matches) for cat, matches in detected.items())
+    return min(score, 100)
+
+
+def generate_psychological_explanation_advanced(detected: dict) -> str:
+    explanations = []
+
+    if "urgency" in detected:
+        explanations.append("Urgency pressure detected")
+    if "fear" in detected:
+        explanations.append("Fear-based manipulation detected")
+    if "pressure" in detected:
+        explanations.append("Time pressure detected")
+    if "authority" in detected:
+        explanations.append("Fake authority detected")
+    if "reward" in detected:
+        explanations.append("Reward bait detected")
+
+    return " | ".join(explanations) if explanations else "No manipulation detected"
+
+
+def analyze_psychological_advanced(text: str) -> dict:
+    detected = detect_psychological_patterns_advanced(text)
+    score = compute_psychological_score_advanced(detected)
+    explanation = generate_psychological_explanation_advanced(detected)
+
+    return {
+        "psychological_profile": list(detected.keys()),
+        "psychological_score": score,
+        "psychological_explanation": explanation
+    }
+
+
+# ==============================
+# ADVANCED TUNISIAN CONTEXT ANALYSIS
+# ==============================
+
+def detect_tunisian_context_advanced(text: str) -> dict:
+    text_lower = text.lower()
+    detected = {}
+
+    for category, keywords in TUNISIAN_PATTERNS.items():
+        matches = [kw for kw in keywords if kw in text_lower]
+        if matches:
+            detected[category] = matches
+
+    return detected
+
+
+def compute_tunisian_score(detected: dict) -> float:
+    weights = {
+        "banks": 30,
+        "telco": 25,
+        "services": 20,
+        "currency": 15,
+        "common_words": 10
+    }
+
+    score = 0
+    for category, matches in detected.items():
+        score += weights.get(category, 10) * len(matches)
+
+    return min(score, 100)
+
+
+def generate_tunisian_explanation(detected: dict) -> str:
+    if not detected:
+        return "No Tunisian context detected."
+
+    explanations = []
+
+    if "banks" in detected:
+        explanations.append("Tunisian bank detected")
+    if "telco" in detected:
+        explanations.append("Tunisian telecom operator detected")
+    if "services" in detected:
+        explanations.append("Local service context detected")
+    if "currency" in detected:
+        explanations.append("Tunisian currency detected")
+
+    return " | ".join(explanations)
+
+
+def analyze_tunisian_context_advanced(text: str) -> dict:
+    detected = detect_tunisian_context_advanced(text)
+    score = compute_tunisian_score(detected)
+    explanation = generate_tunisian_explanation(detected)
+
+    return {
+        "tunisian_context_detected": len(detected) > 0,
+        "tunisian_score": score,
+        "tunisian_indicators": detected,
+        "tunisian_explanation": explanation
+    }
+
+
+# ==============================
+# QR & URL RISK DETECTION
+# ==============================
+
 def detect_qr_risk(text: str):
     """Detect QR-specific risk factors and phishing indicators"""
     text_lower = text.lower()
@@ -201,3 +420,52 @@ def detect_qr_risk(text: str):
         "qr_triggers": triggers,
         "qr_score": round(score, 4)
     }
+
+
+# ==============================
+# ADVANCED SECURITY SIGNALS
+# ==============================
+
+def detect_advanced_security_signals(text: str) -> list:
+    """Detect advanced security signals in text"""
+    text_lower = text.lower()
+    signals = []
+
+    # 🔗 Suspicious links
+    if "http" in text_lower or "www" in text_lower:
+        signals.append("suspicious_link")
+
+    # 🔑 Request for sensitive info
+    sensitive_keywords = [
+        "password", "mot de passe",
+        "code", "otp",
+        "identifiant", "login"
+    ]
+    if any(word in text_lower for word in sensitive_keywords):
+        signals.append("sensitive_info_request")
+
+    # ⏳ Time pressure
+    time_pressure = [
+        "urgent", "immédiatement",
+        "avant minuit", "now", "asap"
+    ]
+    if any(word in text_lower for word in time_pressure):
+        signals.append("time_pressure")
+
+    # 🧑‍💻 Fake support
+    support_keywords = [
+        "support", "technical support",
+        "service client", "security team"
+    ]
+    if any(word in text_lower for word in support_keywords):
+        signals.append("fake_support")
+
+    # 🎁 Reward scam
+    reward_keywords = [
+        "gagné", "bonus", "cadeau",
+        "reward", "prize"
+    ]
+    if any(word in text_lower for word in reward_keywords):
+        signals.append("reward_trap")
+
+    return signals

@@ -1299,5 +1299,48 @@
     "created_at": "2026-04-05T03:37:41.048795",
     "human_decision": null,
     "analyst_comment": ""
+  },
+  {
+    "analysis_id": "e3f37e25-55b3-4259-89df-046a05545fd1",
+    "input_text": "Urgent : votre compte BIAT sera suspendu immédiatement. Vérifiez vos informations maintenant via ce lien.",
+    "prediction": "phishing",
+    "risk_score": 0.7042,
+    "probabilities": {
+      "phishing": 0.7488722680046895,
+      "safe": 0.25112773199531047
+    },
+    "rules_triggered": [
+      "urgent",
+      "immédiatement",
+      "compte",
+      "suspendu"
+    ],
+    "explanation": "Le message a été classé comme phishing avec un score de risque de 0.70, car il contient des indices suspects : urgent, immédiatement, compte, suspendu.",
+    "recommended_action": "Escalate to analyst",
+    "severity": "high",
+    "attack_type": "banking scam",
+    "remediation_tips": [
+      "Do not click the suspicious link.",
+      "Do not share credentials or OTP codes.",
+      "Contact your bank using official channels."
+    ],
+    "psychological_profile": [
+      "urgency",
+      "fear"
+    ],
+    "psychological_explanation": "Psychological manipulation detected: urgency, fear",
+    "tunisian_context_detected": true,
+    "tunisian_indicators": [
+      "biat"
+    ],
+    "tunisian_context_message": "This message matches common phishing patterns targeting Tunisian citizens.",
+    "ml_score": 0.7489,
+    "rules_score": 0.6,
+    "analysis_mode": "message",
+    "qr_triggers": [],
+    "qr_score": 0.0,
+    "created_at": "2026-04-05T03:59:53.707026",
+    "human_decision": null,
+    "analyst_comment": ""
   }
 ]
